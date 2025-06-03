@@ -1,0 +1,2264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suryoday Enterprise - Quality always Matter</title>
+    <!-- Add Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f7f2;
+            color: #3a3a3a;
+            line-height: 1.6;
+        }
+        
+        /* Header and Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(4px);
+            transition: all 0.3s ease;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            color: #4a7c59;
+            cursor: pointer;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-btn {
+            background-color: transparent;
+            border: none;
+            color: #4a7c59;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background-color: #4a7c59;
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+            background:  linear-gradient(rgba(213, 207, 207, 0.7), rgba(213, 207, 207, 0.7)), 
+                        url('./papad 2.jpeg') center/cover no-repeat;
+        }
+        
+        .business-name {
+            font-size: 3.5rem;
+            color: #4a7c59;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .about-btn {
+            background-color: #4a7c59;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 124, 89, 0.3);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .about-btn:hover {
+            background-color: #3d6649;
+            transform: translateY(-3px);
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 5rem 5%;
+            background-color: #f0f5f1;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #4a7c59;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #4a7c59;
+        }
+        
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.3rem;
+            color: #4a7c59;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-desc {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .product-btn {
+            background-color: #4a7c59;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+        
+        .product-btn:hover {
+            background-color: #3d6649;
+        }
+        
+        /* WhatsApp contact button */
+        .whatsapp-contact {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            gap: 0.5rem;
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: fit-content;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #1da851;
+        }
+        
+        /* Free delivery text */
+        .free-delivery {
+            display: flex;
+            align-items: center;
+            color: #4a7c59;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .free-delivery i {
+            margin-right: 0.5rem;
+            color: #4a7c59;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 5rem 5%;
+            background-color: #e8f0eb;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-header {
+            background-color: #4a7c59;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .contact-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .contact-body {
+            padding: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            width: calc(50% - 1rem);
+            min-width: 250px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #f0f5f1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #4a7c59;
+            flex-shrink: 0;
+        }
+        
+        .contact-text {
+            flex-grow: 1;
+        }
+        
+        .contact-text h4 {
+            color: #4a7c59;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-text p {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .contact-footer {
+            background-color: #f0f5f1;
+            padding: 1.5rem 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-tagline {
+            color: #4a7c59;
+            font-weight: 500;
+        }
+        
+        .contact-social {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        /* Colorful social media icons */
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        
+        .social-link.facebook {
+            background-color: #1877F2;
+        }
+        
+        .social-link.instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        
+        .social-link.youtube {
+            background-color: #FF0000;
+        }
+        
+        .social-link.linkedin {
+            background-color: #0A66C2;
+        }
+        
+        /* Added WhatsApp style */
+        .social-link.whatsapp {
+            background-color: #25D366;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-map {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Reviews Section */
+        .reviews {
+            padding: 5rem 5%;
+            background-color: #f8f7f2;
+        }
+        
+        .review-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 2rem;
+            padding: 1rem 0;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+        }
+        
+        /* Hide scrollbar but allow scrolling */
+        .review-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .review-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .review-container::-webkit-scrollbar-thumb {
+            background: #4a7c59;
+            border-radius: 10px;
+        }
+        
+        .review-card {
+            flex: 0 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+        
+        .scroll-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .scroll-btn {
+            background-color: #4a7c59;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .scroll-btn:hover {
+            background-color: #3d6649;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #3a3a3a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .footer-text {
+            margin-bottom: 1rem;
+            margin-top: 0px; 
+            padding-top: 0px; 
+            text-align: center; 
+        }
+        
+        /* Business social icons */
+        .business-social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .business-social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        /* Footer separator line */
+        .footer-separator {
+            width: 60%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin: 1rem auto;
+        }
+        
+        /* Modified: Developer credit styles */
+        .developer-credit {
+            font-size: 0.7rem;
+            color: #f0f5f1;
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+        
+        .developer-phone {
+            font-size: 0.7rem;
+            color: #f0f5f1;
+            opacity: 0.8;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        
+        /* Developer social icons - black and white design */
+        .developer-social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: -0.5rem;
+        }
+        
+        .developer-social-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            background-color: #333; /* Dark background for all icons */
+            border: 1px solid #555; /* Subtle border */
+        }
+        
+        .developer-social-icon:hover {
+            background-color: #555;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-icon.facebook, .business-social-icon.facebook {
+            background-color: #1877F2;
+        }
+        
+        .social-icon.instagram, .business-social-icon.instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        
+        .social-icon.youtube, .business-social-icon.youtube {
+            background-color: #FF0000;
+        }
+        
+        .social-icon.linkedin, .business-social-icon.linkedin {
+            background-color: #0A66C2;
+        }
+        
+        .social-icon.whatsapp, .business-social-icon.whatsapp {
+            background-color: #25D366;
+        }
+        
+        .social-icon:hover, .business-social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Product Detail Page */
+        .product-detail {
+            display: none;
+            min-height: 100vh;
+            padding-top: 100px;
+            padding-bottom: 3rem;
+            background-color: #f8f7f2;
+        }
+        
+        .product-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        
+        /* Redesigned Back to Home button */
+        .back-home-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(74, 124, 89, 0.1);
+            color: #4a7c59;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid #4a7c59;
+        }
+
+        .back-home-btn:hover {
+            background-color: #4a7c59;
+            color: white;
+        }
+
+        .back-icon {
+            margin-right: 0.3rem;
+            font-size: 0.9rem;
+        }
+        
+        .product-detail-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-detail-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .product-detail-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .product-detail-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        
+        .product-detail-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 2rem;
+        }
+        
+        .product-detail-title {
+            font-size: 2rem;
+            color: #4a7c59;
+            margin-bottom: 1.rem;
+        }
+        
+        .product-detail-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4a7c59;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-detail-description {
+            margin-bottom: 2rem;
+        }
+        
+        .product-detail-description h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-detail-description p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        /* About Page */
+        .about-page {
+            display: none;
+            min-height: 100vh;
+            padding-top: 100px;
+            padding-bottom: 3rem;
+            background-color: #f8f7f2;
+        }
+        
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        
+        .about-title {
+            font-size: 2.5rem;
+            color: #4a7c59;
+            margin-bottom: 2rem;
+        }
+        
+        .about-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-section-title {
+            font-size: 1.8rem;
+            color: #4a7c59;
+            margin-bottom: 1rem;
+        }
+        
+        .about-text {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .about-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 250px;
+            height: 250px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .values-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .value-card {
+            flex: 1;
+            min-width: 250px;
+            background-color: #f0f5f1;
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+        
+        .value-title {
+            font-size: 1.3rem;
+            color: #4a7c59;
+            margin-bottom: 0.8rem;
+        }
+        
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .team-member {
+            width: 250px;
+            text-align: center;
+        }
+        
+        .team-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+        }
+        
+        .team-name {
+            font-size: 1.3rem;
+            color: #4a7c59;
+            margin-bottom: 0.3rem;
+        }
+        
+        .team-role {
+            color: #666;
+            margin-bottom: 0.8rem;
+        }
+        
+        .certifications {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .certification {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .certification-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #f0f5f1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.8rem;
+            font-size: 2rem;
+        }
+        
+        /* Success Message */
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #4a7c59;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-year {
+            position: absolute;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            background-color: #4a7c59;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            z-index: 1;
+        }
+        
+        .timeline-content {
+            background-color: #f0f5f1;
+            border-radius: 10px;
+            padding: 1.5rem;
+        }
+        
+        .timeline-title {
+            font-size: 1.3rem;
+            color: #4a7c59;
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Values Grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #4a7c59;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+        
+        /* Developer Contact Section */
+        .developer-section {
+            margin-top: 0.5rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .business-name {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .menu-toggle {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: #4a7c59;
+                cursor: pointer;
+            }
+            
+            .product-detail-content {
+                flex-direction: column;
+            }
+            
+            .product-detail-image img {
+                height: 300px;
+            }
+            
+            .timeline-item {
+                padding-left: 50px;
+            }
+            
+            .timeline-year {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+            
+            .timeline-line {
+                left: 17px;
+            }
+            
+            .logo img {
+                height: 40px;
+            }
+            
+            .logo-text {
+                font-size: 1.4rem;
+            }
+            
+            .contact-info-item {
+                width: 100%;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        .whatsapp-message {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Order Form Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .order-form-modal {
+            background-color: white;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-20px);
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active .order-form-modal {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            background-color: #4a7c59;
+            color: white;
+            padding: 1.5rem;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #4a7c59;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #4a7c59;
+            box-shadow: 0 0 0 2px rgba(74, 124, 89, 0.2);
+        }
+
+        .modal-footer {
+            padding: 1rem 1.5rem;
+            background-color: #f5f5f5;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-cancel {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        .btn-cancel:hover {
+            background-color: #e1e1e1;
+        }
+
+        .btn-submit {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background-color: #1da851;
+        }
+
+        .form-error {
+            color: #dc3545;
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
+            display: none;
+        }
+
+        .form-error.active {
+            display: block;
+        }
+
+        /* Product buttons container */
+        .product-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Home page free delivery text */
+        .home-free-delivery {
+            display: flex;
+            align-items: center;
+            color: #4a7c59;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        /* Quantity selector styles */
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            max-width: 150px;
+        }
+
+        .quantity-btn {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #ddd;
+            background-color: #f8f8f8;
+            color: #4a7c59;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .quantity-btn:hover {
+            background-color: #4a7c59;
+            color: white;
+            border-color: #4a7c59;
+        }
+
+        .quantity-input {
+            width: 50px;
+            height: 36px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 1rem;
+            margin: 0 5px;
+        }
+
+        .quantity-input::-webkit-inner-spin-button,
+        .quantity-input::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .quantity-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #4a7c59;
+        }
+
+        /* Loading Indicator Styles */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .loading-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .quantity-loader {
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
+
+        .quantity-loader-circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 8px solid transparent;
+            border-top-color: #4a7c59;
+            border-radius: 50%;
+            animation: spin 1.2s linear infinite;
+        }
+
+        .quantity-loader-circle:nth-child(2) {
+            border-top-color: transparent;
+            border-right-color: #4a7c59;
+            animation-delay: 0.4s;
+        }
+
+        .quantity-loader-circle:nth-child(3) {
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: #4a7c59;
+            animation-delay: 0.8s;
+        }
+
+        .quantity-value {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4a7c59;
+        }
+
+        .loading-text {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            color: #4a7c59;
+            font-weight: 500;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header id="header">
+        <nav>
+            <div class="logo" id="logoLink">
+                <img src="logo.jpeg" alt="Suryoday Enterprise Logo">
+                <span class="logo-text">Suryoday Enterprise</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <div class="nav-links" id="navLinks">
+                <button class="nav-btn" id="navAboutBtn">About Us</button>
+                <button class="nav-btn" id="navProductsBtn">Products</button>
+                <button class="nav-btn" id="navContactBtn">Contact Us</button>
+                <button class="nav-btn" id="navReviewsBtn">Reviews</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <h1 class="business-name">Suryoday Enterprise</h1>
+            <p class="tagline">Quality always Matter</p>
+            <a href="#" class="about-btn" id="aboutUsBtn">About Us</a>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products" id="products">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-container" id="productContainer">
+                <!-- Products will be added dynamically -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <h3>Get In Touch</h3>
+                        <p>We'd love to hear from you! Reach out with any questions about our products or services.</p>
+                    </div>  
+                    <div class="contact-body">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <h4>Our Location</h4>
+                                <p>lane no.3, Gold city, pandavdand road, Phursungi-412308, pune, Maharashtra</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-text">
+                                <h4>Phone Number</h4>
+                                <p>+91 8983353089</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-text">
+                                <h4>Email Address</h4>
+                                <p>info.surodayenterprises@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-text">
+                                <h4>Business Hours</h4>
+                                <p>9.00 Am to 5.30 pm<br><br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-footer">
+                        <div class="contact-tagline">
+                            Follow us on social media for updates and promotions
+                        </div>
+                        <div class="contact-social">
+                            <!-- Updated social media links with colorful icons -->
+                            <a href="https://www.facebook.com/people/Suryoday-Enterprise/100063780888117/" class="social-link facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/suryoday_by_pk/" class="social-link instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@SuryodayEnterprises2020" class="social-link youtube" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <!-- Added WhatsApp Icon with chat link -->
+                            <a href="https://wa.me/918983353089" class="social-link whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Google Map (Replace with your actual map embed code) -->
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3784.0591025262015!2d74.00161347519065!3d18.480981882604915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDI4JzUxLjUiTiA3NMKwMDAnMTUuMSJF!5e0!3m2!1sen!2sin!4v1741623284105!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews" id="reviews">
+            <h2 class="section-title">Customer Reviews</h2>
+            <div class="review-container" id="reviewContainer">
+                <!-- Reviews will be added dynamically -->
+            </div>
+            <div class="scroll-controls">
+                <button class="scroll-btn" id="scrollLeft">←</button>
+                <button class="scroll-btn" id="scrollRight">→</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p class="footer-text">© 2025 Suryoday Enterprise. All rights reserved.</p>
+            
+            <!-- Business Social Media Icons -->
+            <div class="business-social-icons">
+                <a href="https://www.facebook.com/people/Suryoday-Enterprise/100063780888117/" class="business-social-icon facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/suryoday_by_pk/" class="business-social-icon instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@SuryodayEnterprises2020" class="business-social-icon youtube" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/8983353089" class="business-social-icon whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            
+            <!-- Added separator line between business and developer sections -->
+            <div class="footer-separator"></div>
+
+            <!-- Developer Credits -->
+            <small class="developer-credit">Website developed by Shree & Gokul</small>
+            <small class="developer-phone">+(91) 9423669690</small>
+            
+            <!-- Developer Contact Icons (black and white design) -->
+            <div class="developer-section">
+                <div class="developer-social-icons">
+                    <a href="https://www.facebook.com/" class="developer-social-icon" target="_blank" title="Contact developer on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="developer-social-icon" target="_blank" title="Contact developer on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="developer-social-icon" target="_blank" title="Contact developer on LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div> 
+        </footer>
+    </div>
+
+    <!-- Product Detail Page -->
+    <div id="product-detail" class="product-detail">
+        <div class="product-detail-container">
+            <!-- Redesigned Back to Home button -->
+            <a href="#" class="back-home-btn" id="backToHome">
+                <span class="back-icon">←</span> Back
+            </a>
+            
+            <div class="product-detail-card">
+                <div class="product-detail-content">
+                    <div class="product-detail-image">
+                        <img id="productDetailImage" src="./bydefualt.jpeg" alt="Product Image">
+                    </div>
+                    
+                    <div class="product-detail-info">
+                        <h1 id="productDetailTitle" class="product-detail-title">Product Title</h1>
+                        <p id="productDetailPrice" class="product-detail-price"></p>
+                        
+                        <div class="product-detail-description">
+                            <h3>Description</h3>
+                            <p id="productDetailShortDesc">Short description</p>
+                            <p id="productDetailLongDesc">Long description</p>
+                            
+                            <!-- Added quantity selector -->
+                            <div class="quantity-container">
+                                <label class="quantity-label">Quantity</label>
+                                <div class="quantity-selector">
+                                    <button class="quantity-btn decrease-btn">-</button>
+                                    <input type="number" class="quantity-input" value="1" min="1" max="99" id="productQuantity">
+                                    <button class="quantity-btn increase-btn">+</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Added WhatsApp contact button with attractive message -->
+                            <div class="whatsapp-contact">
+                                <p class="whatsapp-message">❤️ Love this product? Connect with us directly!</p>
+                                <button class="whatsapp-btn" id="orderProductBtn">
+                                    Order Product
+                                </button>
+                                <!-- Added Free Home Delivery text -->
+                                <div class="free-delivery">
+                                    <i class="fas fa-truck"></i> Free home delivery available
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about-page" class="about-page">
+        <div class="about-container">
+            <!-- Redesigned Back to Home button -->
+            <a href="#" class="back-home-btn" id="backToHomeFromAbout">
+                <span class="back-icon">←</span> Back
+            </a>
+            
+            <h1 class="about-title">About Suryoday Enterprise</h1>
+            
+            <div class="about-section">
+                <h2 class="about-section-title">Our Story</h2>
+                <p class="about-text">
+                    In every day life everyone is busy with their schedule. No one has time for proper cooking and eating.
+                    So we shift towards fast food and it is regular practice now. There is no option for this. So we thought that we can provide good healthy breakfast for our family members by providing delicious and healthy products.
+                </p>
+                
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <!-- 2020 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Our Beginning</h3>
+                            <p>
+                                We started firstly from fresh millet flours in January 2020. We began preparing different types of flours from wheat, Jowar, Nachani, Bajari, Rice, lentiles, and Suntwada.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2021 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Expanding to Turmeric</h3>
+                            <p>
+                                From 2021 we started to make turmeric powder from turmeric sticks. We bring good quality turmeric sticks directly from farmers and produce non-mixed, high-quality turmeric powder with no adulterants or preservatives. We supplied this turmeric powder to various happy customers of Suryoday enterprises.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2022 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Packaging and Sevai Production</h3>
+                            <p>
+                                In 2022, we started packaging turmeric powder and supplying it to local area shops within appropriate time. Also, a new machine was added for manufacturing of sevai. From this, we started our own production of sevai.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2023 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">New Machinery and Products</h3>
+                            <p>
+                                In 2023, we added a few machines to our group: a papad rolling machine and a dal making machine. We started selling papad and dal produced from these machines.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2024 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Retail Expansion</h3>
+                            <p>
+                                In 2024, we started packing Shevai in small pouches and distributing them to local area grocery stores. Along with this, we began selling different types of papad through local advertisements and grocery shops.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2025 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Product Innovation</h3>
+                            <p>
+                                From this year, we decided to give a variety of sevai to our valuable customers which are free of preservatives and made of food items such as vegetables, fruits, flavors, and powders.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-section">
+                <h2 class="about-section-title">Our Promise</h2>
+                <p>
+                    We are committed to providing healthy, preservative-free products to our customers. Our mission is to ensure that even in today's busy world, families can enjoy nutritious and delicious food options.
+                </p>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🌾</div>
+                        <h3 class="value-title">Quality Ingredients</h3>
+                        <p>We source the best raw materials directly from farmers</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🍃</div>
+                        <h3 class="value-title">No Preservatives</h3>
+                        <p>All our products are free from artificial preservatives</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">❤️</div>
+                        <h3 class="value-title">Health First</h3>
+                        <p>We prioritize nutrition and health in all our products</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Form Modal -->
+    <div class="modal-overlay" id="orderFormModal">
+        <div class="order-form-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Order Product</h3>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                        <div class="form-error" id="nameError">Please enter your name</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Contact Number</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                        <div class="form-error" id="phoneError">Please enter a valid phone number</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                        <div class="form-error" id="emailError">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="form-label">Home Address</label>
+                        <textarea id="address" class="form-control" rows="3" required></textarea>
+                        <div class="form-error" id="addressError">Please enter your address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalQuantity" class="form-label">Quantity</label>
+                        <div class="quantity-selector">
+                            <button type="button" class="quantity-btn decrease-modal-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" id="modalQuantity">
+                            <button type="button" class="quantity-btn increase-modal-btn">+</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-cancel" id="cancelOrder">Cancel</button>
+                <button class="btn btn-submit" id="submitOrder">Share on WhatsApp to Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay with Quantity Loader -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="quantity-loader">
+            <div class="quantity-loader-circle"></div>
+            <div class="quantity-loader-circle"></div>
+            <div class="quantity-loader-circle"></div>
+            <div class="quantity-value" id="loaderQuantity">1</div>
+        </div>
+        <p class="loading-text">Processing your order...</p>
+    </div>
+
+    <script>
+        // Sample products data
+        const products = [
+            {
+                id: 1,
+                title: "Udid Papad",
+                description: "Traditional crispy papad made with high-quality ingredients, perfect as a side dish or snack.",
+                image: "./udid papad.jpeg",
+                longDescription: "Crispy, light, and full of traditional flavors, Udid Papad is made from premium-quality urad dal (black gram) flour, blended with black pepper, asafoetida (hing), salt, and miri for an authentic and aromatic taste. Sun-dried to perfection, it offers a satisfying crunch in every bite. Whether roasted or fried, Udid Papad pairs wonderfully with meals or can be enjoyed as a standalone snack. Rich in protein and fiber, it's a nutritious and flavorful addition to your diet."
+            },
+            {
+                id: 2,
+                title: "Khiche Papad",
+                description: "Crispy snacks made with rice and aromatic spices, crafted in a traditional way.",
+                image: "./khiche.jpeg",
+                longDescription: "Light, crispy, and easy to digest, Khiche Papad is a wholesome delight made from rice, cumin seeds (jira), salt, asafoetida (hing), garlic (lasun), carom seeds (owa), and coriander (kotimbir), ensuring a nutritious and flavorful experience. With no maida, no preservatives, and not fried, it offers a healthy alternative without compromising on taste. Its delicate crunch and rich texture make it a perfect accompaniment to meals or an enjoyable snack on its own. Packed with essential nutrients and plant-based protein, Khiche Papad is a guilt-free indulgence for all ages."
+            },
+            {
+                id: 3,
+                title: "Potato Papad",
+                description: "Crispy potato-based snacks made with fresh potatoes and aromatic spices.",
+                image: "./potyato.jpeg",
+                longDescription: "Enjoy the crispy and flavorful taste of our Potato Papad, made from fresh potatoes, tapioca pearls, chili powder, and salt. Light yet satisfying, this delicious snack is perfect for fasting (vrat) as it is made with ingredients commonly consumed during religious fasts.Crafted with simple, high-quality ingredients, it offers a delightful crunch, making it an ideal choice for tea-time or festive occasions."
+            },
+            {
+                id: 4,
+                title: "Nachani Papad",
+                description: "Stone-ground nachani (ragi) flour, rich in calcium and iron.",
+                image: "./nacani.jpeg",
+                longDescription: "Made from stone-ground nachani (ragi) flour, our Nachani Papad is a nutritious and crunchy delight. Packed with calcium, iron, and dietary fiber, it supports bone health and digestion while offering a wholesome snacking experience.Flavored with cumin seeds, ajwain, salt, and asafoetida, this papad brings a perfect balance of taste and health, making it a delicious and nourishing addition to your meals."
+            },
+            {
+                id: 5,
+                title: "Sandage",
+                description: "Sun-dried vegetable nuggets that add flavor to curries and dal.",
+                image: "./sandage.jpeg",
+                longDescription: "Our Sandage are sun-dried vegetable nuggets made from a nutritious blend of chana dal and mataki dal, seasoned with turmeric, chili powder, and salt. Prepared using traditional preservation methods, they offer a rich, earthy flavor and delightful texture.Perfect for enhancing the taste of various dishes, Sandage is a pantry essential, especially when fresh vegetables are not available. Add them to your curries or dal for an authentic and wholesome touch!"
+            },
+            {
+                id: 6,
+                title: "Rava Sevai (Vermicelli)",
+                description: "Nutrient-rich rava sevai for a quick and delicious meal.",
+                image: "rava.png",
+                longDescription: "Delicate, light, and versatile, Rawa Sevai is made from premium-quality semolina (rawa), offering a smooth texture and rich taste. Perfect for preparing a variety of sweet and savory dishes, it cooks quickly and absorbs flavors beautifully. Its fine strands make it ideal for traditional recipes, whether enjoyed as a warm, comforting dessert or a flavorful meal. Nutritious and easy to digest, Rawa Sevai is a wholesome addition to your kitchen."
+            },
+            {
+                id: 7,
+                title: "Mango Sevai (Vermicelli)",
+                description: "Delicious mango-flavored sevai, perfect for a sweet treat.",
+                image: "Mango .jpg",
+                longDescription: "Mango Sevai  Our Mango Sevai combines the goodness of traditional sevai with the sweet, tropical flavor of real mangoes. Made with rawa, wheat flour, and mango pulp, it contains no artificial flavors, ensuring a naturally delicious treat. Perfect for indulging in a flavorful and aromatic dessert that brings the essence of mangoes to every bite."
+            },
+            {
+                id: 8,
+                title: "Rose Sevai (Vermicelli)",
+                description: "Fragrant rose-flavored sevai, a delicate and aromatic treat.",
+                image: "Rose.jpg",
+                longDescription: "Experience the delicate aroma and floral sweetness of Rose Sevai, infused with natural rose essence and gulab pakli powder. Made with rawa and a hint of rose color, it offers a fragrant and flavorful treat.A perfect indulgence for those who love light, aromatic desserts, bringing an elegant touch to every bite."
+            },
+            {
+                id: 9,
+                title: "Wheat Sevai (Vermicelli)",
+                description: "Nutritious wheat sevai made from whole wheat for a healthier option.",
+                image: "wheat.png",
+                longDescription: "Nutritious, light, and naturally flavorful, Wheat Sevai is made from premium-quality whole wheat, offering a rich taste and satisfying texture. A healthier alternative to refined grains, it is high in fiber and essential nutrients, making it an excellent choice for balanced meals. Perfect for preparing both sweet and savory dishes, Wheat Sevai cooks quickly and blends beautifully with a variety of flavors. Enjoy it as a wholesome breakfast, a light meal, or a delicious dessert."
+            },
+            {
+                id: 10,
+                title: "Chocolate Sevai (Vermicelli)",
+                description: "Rich chocolate-flavored sevai for dessert lovers.",
+                image: "Chocklate.jpg",
+                longDescription: "Indulge in the rich and delightful taste of Chocolate Sevai, a unique fusion of tradition and chocolatey goodness. Made with rawa, chocolate essence, cocoa powder, and chocolate powder, it offers a smooth texture and deep chocolate flavor.A perfect choice for dessert lovers, this sevai brings a delicious twist to classic sweets, making every bite a treat to savor."
+            },
+            {
+                id: 11,
+                title: "Shevaga Sevai (Vermicelli)",
+                description: "Unique moringa-flavored sevai with numerous health benefits.",
+                image: "Shevga.png",
+                longDescription: "Experience the nutrient-rich goodness of Shevaga Sevai, infused with moringa (shevaga) powder and a blend of aromatic spices. Made with rawa, jeera, kasuri methi, cloves, fennel seeds, black pepper, and milk powder, it offers a unique flavor while providing essential vitamins and minerals.A wholesome and flavorful choice, Shevaga Sevai is a delicious way to enjoy the benefits of moringa in every bite."
+            },
+            {
+                id: 12,
+                title: "Beet Root Sevai (Vermicelli)",
+                description: "Unique Beet Root Sevai with numerous health benefits.",
+                image: "beet.png",
+                longDescription: "Experience the nutrient-rich goodness of Beet Root Sevai, Infused with Beet Root powder and a blend of aromatic spices. Made with rawa, cloves, Salt, spices, and beet root powder, it offers a unique flavor while providing essential iron and vitamins. A wholesome and flavorful choice, Shevaga Sevai is a delicious way to enjoy the benefits of beet root in every bite."
+            },
+            {
+                id: 13,
+                title: "Palak Sevai (Vermicelli)",
+                description: "Spinach-infused sevai packed with nutrients and flavor.",
+                image: "palak.png",
+                longDescription: "Enjoy the nutritious and flavorful taste of Palak Sevai, infused with the goodness of spinach and aromatic spices. Made with rawa, palak powder, kasuri methi, jeera, cloves, fennel seeds, and coriander, it offers a delicious way to add greens to your diet.With its rich taste and wholesome ingredients, Palak Sevai is a perfect choice for a healthy and satisfying meal."
+            }
+        ];
+        
+        // Sample reviews data
+        const reviews = [
+            {
+                name: "Dr.Akshay ",
+                text: "Papad 1 no.hote Taste la  Mala personally khoop aavadale."
+            },
+            {
+                name: "Scientist Tejas",
+                text: "Bhai mango sevai is one of the best sevai"
+            },
+            {
+                name: "Poonam Mishra",
+                text: "Thanks a lot of your samples. Palak flavour is superb and tasty adults ke liye bhi bahut delicious hai just add tomato and onion nothing else"
+            },
+            {
+                name: "Sanket Khokale",
+                text: "We made mango sevai kheer, and its taste truly brings out the flavor of mango on our tongues. It feels good, gives satisfaction, and is absolutely delicious!"
+            },
+            {
+                name: "Sachin Udamle",
+                text: "Chocolate sevai is awesome and our whole family enjoyed it."
+            },
+            {
+                name: "Priyanka",
+                text: "Vermicelli is yummy.... tasty it is too good... no preservatives for health ."
+            }
+        ];
+        
+        // DOM Elements
+        const mainContent = document.getElementById('main-content');
+        const productDetail = document.getElementById('product-detail');
+        const aboutPage = document.getElementById('about-page');
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const productContainer = document.getElementById('productContainer');
+        const reviewContainer = document.getElementById('reviewContainer');
+        const scrollLeftBtn = document.getElementById('scrollLeft');
+        const scrollRightBtn = document.getElementById('scrollRight');
+        const aboutUsBtn = document.getElementById('aboutUsBtn');
+        const navAboutBtn = document.getElementById('navAboutBtn');
+        const backToHome = document.getElementById('backToHome');
+        const backToHomeFromAbout = document.getElementById('backToHomeFromAbout');
+        const header = document.getElementById('header');
+        const logoLink = document.getElementById('logoLink');
+        const navProductsBtn = document.getElementById('navProductsBtn');
+        const navContactBtn = document.getElementById('navContactBtn');
+        const navReviewsBtn = document.getElementById('navReviewsBtn');
+        
+        // Order Form Modal Elements
+        const orderFormModal = document.getElementById('orderFormModal');
+        const orderProductBtn = document.getElementById('orderProductBtn');
+        const closeModal = document.getElementById('closeModal');
+        const cancelOrder = document.getElementById('cancelOrder');
+        const submitOrder = document.getElementById('submitOrder');
+        const orderForm = document.getElementById('orderForm');
+        
+        // Form input elements
+        const nameInput = document.getElementById('name');
+        const phoneInput = document.getElementById('phone');
+        const emailInput = document.getElementById('email');
+        const addressInput = document.getElementById('address');
+        const modalQuantityInput = document.getElementById('modalQuantity');
+        
+        // Form error elements
+        const nameError = document.getElementById('nameError');
+        const phoneError = document.getElementById('phoneError');
+        const emailError = document.getElementById('emailError');
+        const addressError = document.getElementById('addressError');
+        
+        // Quantity elements
+        const productQuantityInput = document.getElementById('productQuantity');
+        const increaseBtn = document.querySelector('.increase-btn');
+        const decreaseBtn = document.querySelector('.decrease-btn');
+        const increaseModalBtn = document.querySelector('.increase-modal-btn');
+        const decreaseModalBtn = document.querySelector('.decrease-modal-btn');
+        
+        // Loading overlay elements
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        const loaderQuantity = document.getElementById('loaderQuantity');
+        
+        // Current product being ordered
+        let currentProduct = null;
+        
+        // Mobile Menu Toggle
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Logo click returns to home
+        logoLink.addEventListener('click', () => {
+            returnToHome();
+        });
+        
+        // Navigation buttons functionality - works from any page
+        navAboutBtn.addEventListener('click', () => {
+            showAboutPage();
+            navLinks.classList.remove('active'); // Close mobile menu
+        });
+        
+        navProductsBtn.addEventListener('click', () => {
+            returnToHome();
+            setTimeout(() => {
+                const productsSection = document.getElementById('products');
+                window.scrollTo({
+                    top: productsSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }, 100);
+            navLinks.classList.remove('active'); // Close mobile menu
+        });
+        
+        navContactBtn.addEventListener('click', () => {
+            returnToHome();
+            setTimeout(() => {
+                const contactSection = document.getElementById('contact');
+                window.scrollTo({
+                    top: contactSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }, 100);
+            navLinks.classList.remove('active'); // Close mobile menu
+        });
+        
+        navReviewsBtn.addEventListener('click', () => {
+            returnToHome();
+            setTimeout(() => {
+                const reviewsSection = document.getElementById('reviews');
+                window.scrollTo({
+                    top: reviewsSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }, 100);
+            navLinks.classList.remove('active'); // Close mobile menu
+        });
+        
+        // Display Products
+        function displayProducts() {
+            productContainer.innerHTML = '';
+            
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                
+                productCard.innerHTML = `
+    <img src="${product.image}" alt="${product.title}" class="product-img">
+    <div class="product-info">
+        <h3 class="product-title">${product.title}</h3>
+        <p class="product-desc">${product.description}</p>
+        <div class="product-buttons">
+            <a href="#" class="product-btn view-product-btn" data-product-id="${product.id}">View Product</a>
+            <button class="whatsapp-btn order-product-btn" data-product-id="${product.id}">
+                Order Product
+            </button>
+        </div>
+        <div class="home-free-delivery">
+            <i class="fas fa-truck"></i> Free home delivery available
+        </div>
+    </div>
+    `;
+                
+                productContainer.appendChild(productCard);
+            });
+            
+            // Add event listeners to product buttons
+            const viewProductButtons = document.querySelectorAll('.view-product-btn');
+            viewProductButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const productId = button.getAttribute('data-product-id');
+                    showProductDetail(productId);
+                });
+            });
+            
+            // Add event listeners to order buttons on home page
+            const orderProductButtons = document.querySelectorAll('.order-product-btn');
+            orderProductButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const productId = button.getAttribute('data-product-id');
+                    const product = products.find(p => p.id == productId);
+                    if (product) {
+                        currentProduct = product;
+                        openOrderForm();
+                    }
+                });
+            });
+        }
+        
+        // Display Reviews
+        function displayReviews() {
+            reviewContainer.innerHTML = '';
+            
+            reviews.forEach(review => {
+                const reviewCard = document.createElement('div');
+                reviewCard.className = 'review-card';
+                
+                reviewCard.innerHTML = `
+                    <h3 style="color: #4a7c59; margin-bottom: 0.5rem;">${review.name}</h3>
+                    <p style="color: #666;">${review.text}</p>
+                `;
+                
+                reviewContainer.appendChild(reviewCard);
+            });
+        }
+        
+        // Show Product Detail
+        function showProductDetail(productId) {
+            const product = products.find(p => p.id == productId);
+            
+            if (product) {
+                // Update product detail content
+                document.getElementById('productDetailImage').src = product.image;
+                document.getElementById('productDetailImage').alt = product.title;
+                document.getElementById('productDetailTitle').textContent = product.title;
+                document.getElementById('productDetailShortDesc').textContent = product.description;
+                document.getElementById('productDetailLongDesc').textContent = product.longDescription;
+                
+                // Reset quantity to 1
+                productQuantityInput.value = 1;
+                
+                // Set current product for order form
+                currentProduct = product;
+                
+                // Hide main content and show product detail
+                mainContent.style.display = 'none';
+                productDetail.style.display = 'block';
+                aboutPage.style.display = 'none';
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            }
+        }
+        
+        // Show About Page
+        function showAboutPage() {
+            mainContent.style.display = 'none';
+            productDetail.style.display = 'none';
+            aboutPage.style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Return to Home
+        function returnToHome() {
+            mainContent.style.display = 'block';
+            productDetail.style.display = 'none';
+            aboutPage.style.display = 'none';
+        }
+        
+        // Horizontal scrolling controls for reviews
+        scrollLeftBtn.addEventListener('click', () => {
+            reviewContainer.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+        
+        scrollRightBtn.addEventListener('click', () => {
+            reviewContainer.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+        
+        // About Us Button in hero section
+        aboutUsBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            showAboutPage();
+        });
+        
+        // Back to Home buttons
+        backToHome.addEventListener('click', (e) => {
+            e.preventDefault();
+            returnToHome();
+        });
+        
+        backToHomeFromAbout.addEventListener('click', (e) => {
+            e.preventDefault();
+            returnToHome();
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+        
+        // Quantity controls
+        if (increaseBtn) {
+            increaseBtn.addEventListener('click', () => {
+                let value = parseInt(productQuantityInput.value);
+                if (value < 99) {
+                    productQuantityInput.value = value + 1;
+                }
+            });
+        }
+        
+        if (decreaseBtn) {
+            decreaseBtn.addEventListener('click', () => {
+                let value = parseInt(productQuantityInput.value);
+                if (value > 1) {
+                    productQuantityInput.value = value - 1;
+                }
+            });
+        }
+        
+        if (increaseModalBtn) {
+            increaseModalBtn.addEventListener('click', () => {
+                let value = parseInt(modalQuantityInput.value);
+                if (value < 99) {
+                    modalQuantityInput.value = value + 1;
+                }
+            });
+        }
+        
+        if (decreaseModalBtn) {
+            decreaseModalBtn.addEventListener('click', () => {
+                let value = parseInt(modalQuantityInput.value);
+                if (value > 1) {
+                    modalQuantityInput.value = value - 1;
+                }
+            });
+        }
+        
+        // Prevent manual input of invalid values
+        productQuantityInput.addEventListener('change', () => {
+            let value = parseInt(productQuantityInput.value);
+            if (isNaN(value) || value < 1) {
+                productQuantityInput.value = 1;
+            } else if (value > 99) {
+                productQuantityInput.value = 99;
+            }
+        });
+        
+        modalQuantityInput.addEventListener('change', () => {
+            let value = parseInt(modalQuantityInput.value);
+            if (isNaN(value) || value < 1) {
+                modalQuantityInput.value = 1;
+            } else if (value > 99) {
+                modalQuantityInput.value = 99;
+            }
+        });
+        
+        // Order Form Modal Functions
+        function openOrderForm() {
+            // Set the modal quantity to match the product detail quantity if coming from product detail page
+            if (productDetail.style.display === 'block' && productQuantityInput) {
+                modalQuantityInput.value = productQuantityInput.value;
+            } else {
+                modalQuantityInput.value = 1;
+            }
+            
+            orderFormModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+        
+        function closeOrderForm() {
+            orderFormModal.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+            resetForm();
+        }
+        
+        function resetForm() {
+            orderForm.reset();
+            modalQuantityInput.value = 1;
+            // Hide all error messages
+            nameError.classList.remove('active');
+            phoneError.classList.remove('active');
+            emailError.classList.remove('active');
+            addressError.classList.remove('active');
+        }
+        
+        // Validate form
+        function validateForm() {
+            let isValid = true;
+            
+            // Validate name
+            if (!nameInput.value.trim()) {
+                nameError.classList.add('active');
+                isValid = false;
+            } else {
+                nameError.classList.remove('active');
+            }
+            
+            // Validate phone (simple validation for demonstration)
+            const phonePattern = /^[0-9]{10,12}$/;
+            if (!phonePattern.test(phoneInput.value.trim())) {
+                phoneError.classList.add('active');
+                isValid = false;
+            } else {
+                phoneError.classList.remove('active');
+            }
+            
+            // Validate email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value.trim())) {
+                emailError.classList.add('active');
+                isValid = false;
+            } else {
+                emailError.classList.remove('active');
+            }
+            
+            // Validate address
+            if (!addressInput.value.trim()) {
+                addressError.classList.add('active');
+                isValid = false;
+            } else {
+                addressError.classList.remove('active');
+            }
+            
+            return isValid;
+        }
+        
+        // Show loading overlay with quantity animation
+        function showLoadingOverlay(quantity) {
+            // Set the quantity in the loader
+            loaderQuantity.textContent = quantity;
+            
+            // Show the loading overlay
+            loadingOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            
+            // Animate the quantity number counting up
+            let count = 1;
+            const targetQuantity = parseInt(quantity);
+            const duration = 1500; // Total animation duration in ms
+            const interval = Math.max(50, Math.min(duration / targetQuantity, 200)); // Time between count updates
+            
+            if (targetQuantity > 1) {
+                const countInterval = setInterval(() => {
+                    count++;
+                    loaderQuantity.textContent = count;
+                    
+                    if (count >= targetQuantity) {
+                        clearInterval(countInterval);
+                    }
+                }, interval);
+            }
+        }
+        
+        // Hide loading overlay
+        function hideLoadingOverlay() {
+            loadingOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+        
+        // Submit order to WhatsApp
+        function submitOrderToWhatsApp() {
+            if (!validateForm()) {
+                return;
+            }
+            
+            const name = nameInput.value.trim();
+            const phone = phoneInput.value.trim();
+            const email = emailInput.value.trim();
+            const address = addressInput.value.trim();
+            const quantity = modalQuantityInput.value;
+            
+            // Close the form
+            closeOrderForm();
+            
+            // Show loading overlay with quantity animation
+            showLoadingOverlay(quantity);
+            
+            // Create WhatsApp message
+            const message = `
+*New Order for ${currentProduct.title}*
+
+*Customer Details:*
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Address: ${address}
+
+*Product:* ${currentProduct.title}
+*Quantity:* ${quantity}
+*Description:* ${currentProduct.description}
+            `;
+            
+            // Encode the message for WhatsApp URL
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Simulate processing time (remove in production)
+            setTimeout(() => {
+                // Hide loading overlay
+                hideLoadingOverlay();
+                
+                // Open WhatsApp with the message - using the updated phone number
+                window.open(`https://wa.me/918605112011?text=${encodedMessage}`, '_blank');
+            }, 2000);
+        }
+        
+        // Event Listeners for Order Form
+        orderProductBtn.addEventListener('click', openOrderForm);
+        closeModal.addEventListener('click', closeOrderForm);
+        cancelOrder.addEventListener('click', closeOrderForm);
+        submitOrder.addEventListener('click', submitOrderToWhatsApp);
+        
+        // Close modal when clicking outside
+        orderFormModal.addEventListener('click', (e) => {
+            if (e.target === orderFormModal) {
+                closeOrderForm();
+            }
+        });
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            displayProducts();
+            displayReviews();
+        });
+    </script>
+</body>
+</html>
